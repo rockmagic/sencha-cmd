@@ -1,4 +1,6 @@
-FROM alpine
+FROM anapsix/alpine-java
+
+RUN apk add --no-cache curl
 
 # Installing SenchaCmd 6.2.2
 RUN curl --silent http://cdn.sencha.com/cmd/6.2.2/no-jre/SenchaCmd-6.2.2-linux-amd64.sh.zip -o /tmp/sencha.zip && \
