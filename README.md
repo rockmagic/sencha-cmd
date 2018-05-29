@@ -16,9 +16,9 @@ One can pull this image using:
 To build app in working directory use the following command:
 
 ```
-docker run --rm -v `pwd`:/build -w /build \
+docker run --rm -v `pwd`:/app -w /app \
   rockmagicnet/sencha-cmd:latest \
-  sencha app build
+  app build
 ```
 
 Notice absolute path provided with `pwd` command.
