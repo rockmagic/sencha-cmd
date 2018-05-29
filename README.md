@@ -21,6 +21,6 @@ docker run --rm -v `pwd`:/app -w /app \
   app build
 ```
 
-Notice absolute path provided with `pwd` command.
+Note that the absolute path is provided with `pwd` command.
 
 For Sencha Cmd instructions please refer the ofiicial documentation at https://docs.sencha.com/cmd/
