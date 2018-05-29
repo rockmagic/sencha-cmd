@@ -7,6 +7,9 @@ One can pull this image using:
 * version 4.0.5
 
   ```docker pull rockmagicnet/sencha-cmd:4.0.5```
+* version 4.0.1
+
+  ```docker pull rockmagicnet/sencha-cmd:4.0.1```
 
 ## Using image for automated builds
 
