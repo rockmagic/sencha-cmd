@@ -18,4 +18,6 @@ RUN curl --silent http://cdn.sencha.com/cmd/4.0.5.87/SenchaCmd-4.0.5.87-linux-x6
 
 WORKDIR /app
 
-ENTRYPOINT ["/root/bin/Sencha/Cmd/4.0.5.87/sencha"]
+ENV PATH="/root/bin/Sencha/Cmd/4.0.5.87:${PATH}"
+
+ENTRYPOINT ["sencha"]

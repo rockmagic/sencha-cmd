@@ -17,4 +17,6 @@ RUN curl --silent http://cdn.sencha.com/cmd/6.2.2/no-jre/SenchaCmd-6.2.2-linux-a
 
 WORKDIR /app
 
+ENV PATH="/root/bin/Sencha/Cmd:${PATH}"
+
 ENTRYPOINT [ "/root/bin/Sencha/Cmd/sencha" ]
