@@ -7,6 +7,9 @@ One can pull this image using:
 * version 6.2.2
 
   ```docker pull rockmagicnet/sencha-cmd:6.2.2```
+* version 5.1.3
+
+  ```docker pull rockmagicnet/sencha-cmd:5.1.3```
 * version 4.0.5
 
   ```docker pull rockmagicnet/sencha-cmd:4.0.5```
