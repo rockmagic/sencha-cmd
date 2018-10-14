@@ -12,7 +12,7 @@ RUN curl --silent http://cdn.sencha.com/cmd/6.5.3.6/no-jre/SenchaCmd-6.5.3.6-lin
     unzip /tmp/sencha.zip -d /tmp  && \
     unlink /tmp/sencha.zip  && \
     chmod o+x /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh && \
-    /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh -q -dir /opt/Sencha/Cmd && \
+    /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh -q -dir /opt/Sencha/Cmd/6.5.3.6 && \
     unlink /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh
 
 WORKDIR /app
