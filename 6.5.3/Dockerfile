@@ -7,16 +7,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		fontconfig \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Installing SenchaCmd 6.2.2
+# Installing SenchaCmd
 RUN curl --silent http://cdn.sencha.com/cmd/6.5.3.6/no-jre/SenchaCmd-6.5.3.6-linux-amd64.sh.zip -o /tmp/sencha.zip && \
     unzip /tmp/sencha.zip -d /tmp  && \
     unlink /tmp/sencha.zip  && \
     chmod o+x /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh && \
-    /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh -q && \
+    /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh -q -dir /opt/Sencha/Cmd && \
     unlink /tmp/SenchaCmd-6.5.3.6-linux-amd64.sh
 
 WORKDIR /app
 
-ENV PATH="/root/bin/Sencha/Cmd:${PATH}"
+ENV PATH="/opt/Sencha/Cmd:${PATH}"
 
-ENTRYPOINT [ "/root/bin/Sencha/Cmd/sencha" ]
+ENTRYPOINT [ "/opt/Sencha/Cmd/sencha" ]

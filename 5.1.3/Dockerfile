@@ -13,11 +13,11 @@ RUN curl --silent https://cdn.sencha.com/cmd/5.1.3.61/SenchaCmd-5.1.3.61-linux-x
     unzip /tmp/sencha.zip -d /tmp  && \
     unlink /tmp/sencha.zip  && \
     chmod o+x /tmp/SenchaCmd-5.1.3.61-linux-x64.run  && \
-    echo -ne '\n\n\n\n\n\ny\n\n' | /tmp/SenchaCmd-5.1.3.61-linux-x64.run  && \
+    echo -e '\n\n\n\n\n\ny\n/opt\n\n' | /tmp/SenchaCmd-5.1.3.61-linux-x64.run  && \
     unlink /tmp/SenchaCmd-5.1.3.61-linux-x64.run
 
 WORKDIR /app
 
-ENV PATH="/root/bin/Sencha/Cmd/5.1.3.61:${PATH}"
+ENV PATH="/opt/Sencha/Cmd/5.1.3.61:${PATH}"
 
 ENTRYPOINT ["sencha"]
