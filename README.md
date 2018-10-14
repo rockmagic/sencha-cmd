@@ -1,9 +1,17 @@
 # Sencha Cmd docker image for building ExtJS projects
 
 One can pull this image using:
-* version 6.5.3
+* version 6.6.0
 
   ```docker pull rockmagicnet/sencha-cmd:latest```
+
+  or 
+
+  ```docker pull rockmagicnet/sencha-cmd:6.6.0```
+
+* version 6.5.3
+
+  ```docker pull rockmagicnet/sencha-cmd:6.5.3```
 * version 6.2.2
 
   ```docker pull rockmagicnet/sencha-cmd:6.2.2```
