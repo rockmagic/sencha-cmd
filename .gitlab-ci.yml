@@ -1,0 +1,31 @@
+stages:
+  - build
+
+.build:
+  stage: build
+  only:
+    - master
+  tags:
+    - docker-shell
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker pull rockmagicnet/sencha-cmd:$TAG_ID || true
+    - docker build --cache-from rockmagicnet/sencha-cmd:$TAG_ID --tag $CI_REGISTRY_IMAGE:$TAG_ID $TAG_ID/Dockerfile
+    - docker push $CI_REGISTRY_IMAGE:$TAG_ID
+
+
+build:4.0.1:
+  extends: .build
+  variables:
+    TAG_ID: 4.0.1
+
+build:4.0.5:
+  extends: .build
+  variables:
+    TAG_ID: 4.0.5
+
+build:6.2.2:
+  extends: .build
+  variables:
+    TAG_ID: 6.2.2
