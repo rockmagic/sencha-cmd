@@ -11,7 +11,7 @@ stages:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
   script:
     - docker pull rockmagicnet/sencha-cmd:$TAG_ID || true
-    - docker build --cache-from rockmagicnet/sencha-cmd:$TAG_ID --tag $CI_REGISTRY_IMAGE:$TAG_ID $TAG_ID/Dockerfile
+    - docker build --cache-from rockmagicnet/sencha-cmd:$TAG_ID --tag $CI_REGISTRY_IMAGE:$TAG_ID ./$TAG_ID
     - docker push $CI_REGISTRY_IMAGE:$TAG_ID
 
 
